@@ -1,0 +1,9 @@
+chrome:
+  command: chromium
+  prefix:
+    - "https://www.youtube.com"
+
+firefox:
+  command: firefox
+  prefix:
+    - ""
