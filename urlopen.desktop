@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=URL Open Multiplexer
+GenericName=Web Browser
+Comment=Browse the Web
+Exec=/usr/bin/urlopen %u
+Icon=web-browser
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/http;x-scheme-handler/https;
+StartupNotify=false
+Categories=Network;WebBrowser;
+Keywords=web;browser;internet;
