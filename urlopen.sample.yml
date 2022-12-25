@@ -1,9 +1,14 @@
-chrome:
-  command: chromium
-  prefix:
-    - "https://www.youtube.com"
+default: firefox
 
-firefox:
-  command: firefox
-  prefix:
-    - ""
+browsers:
+  chrome:
+    command: google-chrome-stable
+    args:
+      - --profile-directory="Profile 1"
+
+  firefox:
+    command: firefox-developer-edition
+
+routes:
+  - browser: chrome
+    domain: github.com
