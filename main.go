@@ -8,7 +8,7 @@ import (
 	"strings"
 	"syscall"
 
-	yaml "gopkg.in/yaml.v2"
+	yaml "github.com/goccy/go-yaml"
 )
 
 func main() {
@@ -57,7 +57,6 @@ func (c *Config) Open(rawURL string) error {
 	return c.Browsers[c.Default].Open(rawURL)
 }
 
-
 type DirFunc func() string
 
 var configDirs = []DirFunc{
@@ -92,8 +91,6 @@ func readConfig(fileName string) (*Config, error) {
 	return &c, err
 }
 
-
-
 type Browser struct {
 	Command string   `yaml:"command"`
 	Args    []string `yaml:"args"`
@@ -119,7 +116,6 @@ type Route struct {
 	PathPrefix   *string `yaml:"pathPrefix"`
 	Scheme       *string `yaml:"scheme"`
 }
-
 
 func (r *Route) Match(u *url.URL) bool {
 	return (r.Domain == nil || u.Host == *r.Domain) &&

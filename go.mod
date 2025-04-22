@@ -1,5 +1,5 @@
 module github.com/abihf/urlopen
 
-go 1.20
+go 1.24
 
-require gopkg.in/yaml.v2 v2.4.0
+require github.com/goccy/go-yaml v1.17.1
